@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domfunction</title>
+</head>
+<body>
+    <h2>Q1 Create one function with zero parameter having a console statement;</h2>
+    <h2>Ans</h2>
+    <h3>Input</h3>
+    <pre style="color: blue;">
+    function abc(){
+        console.log("hello")
+    }
+    abc();
+    </pre>
+    <h3>Output</h3>
+    <b style="color:red;">Hello</b>
+    
+<!-- Question number 2>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+<h2>Q2 Create one function which takes two values as a parameter and print the sum of them as "Sum of 3, 4 is 7"</h2>
+<h2>Ans</h2>
+<h3>Input</h3>
+<pre style="color: blue;">
+    <b>
+function create (a,b){
+    console.log(a+b)
+ }
+ create(4,3)
+    </b>
+</pre>
+ <h3 >Output:</h3>
+ <b style="color:red;">7</b>
+
+<!-- Question number3>>>>>>>>>>>>>>>>>> -->
+ <h2>Q3 Create one arrow function</h2>
+    <h2>Ans</h2>
+    <pre>
+    <h3 >Syntax</h3>
+    <b style="color: blue;"> 
+    let arrow = ()=>{
+        console.log("hello i am arrow function")
+    
+    }
+    arrow();
+    </b>
+    </pre>
+
+    <!-- Q4>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <h2> Q4 "Print output: </h2>
+        <pre>
+        <b>
+        var x = 21;
+        var girl = function () {
+            console.log(x);
+            var x = 20;
+        };
+        girl ();"
+        </b>
+    </pre>
+
+        <h2>Ans</h2>
+        <h3>Output:</h3>
+        <p>undefined reason of coming undefined we are print x value before defining inside the function.</p>
+
+
+      <!-- ?Q5>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+
+    <h2>Q5 "Print output: </h2>
+        <pre>
+            <b>
+        var x = 21;
+        girl ();
+        console.log(x)
+        function girl() {
+        console.log(x);
+        var x = 20;
+        };
+            </b></pre>
+
+        <h2>Ans</h2>
+        <h3>Output</h3>
+
+        <p>firstl its give value of x is "undefined" beacause code is runing line by line first girl() function will call and inside function x is print before referencing to its give undefined and than second print to 21 because after calling girl function console the value of x its define a first line</p>
+
+        <!-- Q6>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+
+        <h2>Q6 "Print output</h2>
+        <pre>
+            <b>
+
+            var x = 21;
+            a();
+            b();
+            
+              function a() {
+                
+               x = 20;
+              console.log(x);
+            };
+             function b() {
+                
+                x = 40;
+               console.log(x);
+            };"</b>
+        </pre>
+            <h2>Ans</h2>
+            <h3 >Output:</h3>
+            <b style="color:red;">20,40</b>
+            <p><b>Reason:</b>its give us output 20 and 40 because first here give var x there value is 21 but its only refrencing there not print.after then 2nd line first a()function is call and inside a function x value is 20 and its also print.after than 3rd line b()function will call and inside b function x value is 40 and this is also print,so our output is 20,40</p>
+
+
+            <!-- Q7>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+            <h2>Q7 "Guess the Output"</h2>
+            <pre>
+              <b>
+                function FindSum(a, b){
+                    return a + b;
+                }
+                
+                function DisplayData(data, batch){
+                    console.log(`i am from ${data} and My batch is EA${batch}`)
+                }
+                
+                DisplayData(""PrepBytes"", FindSum(10, 9));"</b>
+            </pre>
+
+                <h2>Ans</h2>
+                <h3 >output:</h3>
+                <b style="color:red;">"I am from PrepBytes and My batch is EA19"</b>
+                <ol>
+                    <li>In there function we are use a callback function </li>
+                    
+                        <li>first we give here on function there name is FindSum and also give two parameter a,b</li>
+                        <li>after than we give here second function DisplayData and its also give two parameter data and batch</li>
+                        <li>inside the second function we are print the parameter value using console.log</li>
+                        <li>after than we call the function DisplayData and give argument inside this 1st "PrepBytes" is value of "data" parameter and second one we call the first function and give the value of first function parameter but this first function is value of our second function parameter  </li>
+                    </ol>
+                
+            <h2>Q8"Guess the output</h2>
+            <pre>
+                <b>
+
+                Abc();
+                const Abc = function(){
+                    let value = 20;
+                    console.log(value);
+                }"   
+                </b>
+            </pre>
+            <h2>Ans</h2>
+            <h3>Output</h3>
+            <b style="color:red;">"Cannot access 'Abc' before initialization"</b>
+            <p>we are not acess the ABC function because we are using here ABC as a variable and whenever we are not declare the first variable we can not access it.</p>
+
+            
+             <h2>Q9 "Guess the output</h2>
+                 <pre>
+                    <b>
+
+                    var a = 10;
+                    (function (){
+                        console.log(a);
+                        var a = 20;
+                    })();
+                    </b>
+                 </pre>
+                 <h2>Ans</h2>
+                 <h3>Output</h3>
+                 <b style="color:red;">undefined</b>
+                 <p>We are using there IIFE function and inside the function we give console and variable A  find the value in local scope first after than its print.</p>
+
+             <h2>Q10 "Guess the Output</h2>
+             <pre>
+                <b>
+                const greet =  function(name){
+                    return function(m){
+                    
+                        console.log(`Hi!! ${name}, ${m}`);
+                    }
+                }
+                  
+                const greet_message = greet('EA19');
+                greet_message(""Welcome To PrepBytes"")
+                </b>
+             </pre>    
+             <h2>Ans</h2>
+             <h3 style="color:red;">Output</h3>
+             <b>Hi!! EA19, Welcome To PrepBytes</b>
+             <p>we are taking one function here and stored in one variable and inside this function we are also create one more function so firstly we call the function greet here and give argument of name and one more time we  call  the function and we give value of inside function  "Welcome to prepbyte" and console it. </p>
+
+             <h2>Q11 Write a function that accepts parameter n and returns factorial of n</h2>
+             <h2>Ans</h2>
+             <pre>
+                unction factorial(n) //take argument as parameter
+        {
+            let fact = 1;
+            while (n!=0) 
+                {
+                    for (let i=1 ; i<=n; i++)
+                    {
+                        fact = fact *i; //from i=1 to n loop iterate and everytime fact update and when for loop condition false control come out of for loop body
+      
+                    }
+                    n=0;    //for stop while loop after completing factorial of number n
+                }
+            return fact;
+        }
+    const num = factorial(4); //passing 4 as argument 
+    console.log(`factorial of 4=`,num)
+
+
+             </pre>
+             <p>Reason : n=0;  for stop while loop after completing factorial of number n inside for loop  
+                <br>fact = fact *i; from i=1 to n loop iterate and everytime fact update and when for
+                loop condition false control come out of for loop body</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
